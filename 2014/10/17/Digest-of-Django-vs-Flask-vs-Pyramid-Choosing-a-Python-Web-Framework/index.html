@@ -110,7 +110,7 @@
 
 	<!-- content -->
 	<div class="mypage">
-	    <h4 id="1-简介">1.简介</h4>
+	    <h4 id="简介">简介</h4>
 <p>　　在众多 python web 框架中，本文只关注Flask, Pyramid和Django。 </p>
 <ul>
 <li>Flask是一个基于小规模应用，实现简单需求的“微框架”</li>
@@ -118,54 +118,54 @@
 <li>Django同样用于开大型WEB应用，本身包含一整套工具包，开发者只需要引入即可进行扩展</li>
 <li>另外，Django实现了一个ORM（Pyramid和Flask则没有）；应用最广的非Django系应用的ORM框架是<a href="http://www.sqlalchemy.org/" target="_blank" rel="external">SQLAlchemy</a>。</li>
 </ul>
-<h4 id="2-发展">2.发展</h4>
+<h4 id="发展">发展</h4>
 <ul>
 <li>最年轻的框架是 Flask，始于2010年中段；但已有大量有影响力的小规模WEB应用建立在其上，比如<a href="http://httpbin.org/" target="_blank" rel="external">httpbin</a>，一个用来调试/测试HTTP库的实用工具。</li>
 <li>Pyramid 起源于<a href="http://www.pylonsproject.org/about/history" target="_blank" rel="external">Pylons project</a>(首版发布于2005年)，在2010年后端被命名为 Pyramid。</li>
 <li>Django 首版发布于2006年。</li>
 </ul>
-<h4 id="3-社区">3.社区</h4>
+<h4 id="社区">社区</h4>
 <p>　　Django在StackOverflow有超过80000个问题。虽然Flask和Pyramid没有如此规模，但社区活跃，在Github上，stars数量几乎相同<br>　　他们都是BSD-derived permissive licenses。</p>
-<h4 id="4-对Bootstrap的支持">4.对Bootstrap的支持</h4>
+<h4 id="对Bootstrap的支持">对Bootstrap的支持</h4>
 <p>　　Django和Pyramid均有内建的Bootstrap工具；Flask则没有，因为它的目的并不是为了创建大型的MVC应用。</p>
-<h5 id="4-1_Flask">4.1 Flask</h5>
+<h5 id="Flask">Flask</h5>
 <p>　　创建Flask的Hello World仅仅需要7行程序</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># from http://flask.pocoo.org/ tutorial </span></div><div class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask </div><div class="line">app = Flask(__name__) </div><div class="line"></div><div class="line"><span class="decorator">@app.route("/") # take note of this decorator syntax, it's a common pattern </span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span> </div><div class="line">	<span class="keyword">return</span> <span class="string">"Hello World!"</span> </div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>: </div><div class="line">	app.run()</div></pre></td></tr></table></figure>
 
-<h5 id="4-2_Pyramid">4.2 Pyramid</h5>
+<h5 id="Pyramid">Pyramid</h5>
 <p>pcreate是Pyramid的bootstrap工具</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pcreate <span class="operator">-s</span> starter hello_pyramid <span class="comment"># Just make a Pyramid project</span></div></pre></td></tr></table></figure>
 
 <p>其Python package index如下：</p>
 <figure class="highlight markup"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Hello_pyramid</div><div class="line">├── CHANGES.txt </div><div class="line">├── development.ini </div><div class="line">├── MANIFEST.in </div><div class="line">├── production.ini </div><div class="line">├── hello_pyramid </div><div class="line">│   ├── __init__.<span class="keyword">py</span> </div><div class="line">│   ├── static </div><div class="line">│   │   ├── pyramid-<span class="number">16</span>x16.png </div><div class="line">│   │   ├── pyramid.png </div><div class="line">│   │   ├── theme.css </div><div class="line">│   │   └── theme.<span class="built_in">min</span>.css </div><div class="line">│   ├── templates </div><div class="line">│   │   └── mytemplate.<span class="keyword">pt</span> </div><div class="line">│   ├── tests.<span class="keyword">py</span> </div><div class="line">│   └── views.<span class="keyword">py</span> </div><div class="line">├── README.txt </div><div class="line">└── setup.<span class="keyword">py</span></div></pre></td></tr></table></figure>
 
-<h5 id="4-3_Django">4.3 Django</h5>
+<h5 id="Django">Django</h5>
 <figure class="highlight Python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">django-admin startproject hello_django </div><div class="line">django-admin startapp howdy <span class="comment"># make an application within our project</span></div></pre></td></tr></table></figure>
 
 <p>　　这里可以看出Django异于Pyramid的一点：Django将一个project分成多个独立的application，而Pyramid和Flask则倾向于将Project作为一个单独application。</p>
 <figure class="highlight markup"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">hello_pyramid </div><div class="line">├── CHANGES.txt </div><div class="line">├── development.ini </div><div class="line">├── MANIFEST.in </div><div class="line">├── production.ini </div><div class="line">├── hello_pyramid </div><div class="line">│   ├── __init__.<span class="keyword">py</span> </div><div class="line">│   ├── static </div><div class="line">│   │   ├── pyramid-<span class="number">16</span>x16.png </div><div class="line">│   │   ├── pyramid.png </div><div class="line">│   │   ├── theme.css </div><div class="line">│   │   └── theme.<span class="built_in">min</span>.css </div><div class="line">│   ├── templates </div><div class="line">│   │   └── mytemplate.<span class="keyword">pt</span> </div><div class="line">│   ├── tests.<span class="keyword">py</span> </div><div class="line">│   └── views.<span class="keyword">py</span> </div><div class="line">├── README.txt </div><div class="line">└── setup.<span class="keyword">py</span></div></pre></td></tr></table></figure>
 
-<h4 id="5-模板">5.模板</h4>
+<h4 id="模板">模板</h4>
 <p>　　Templating允许开发者在页面内添加动态信息而不用发起Ajax请求</p>
-<h5 id="5-1_Django">5.1 Django</h5>
+<h5 id="Django-1">Django</h5>
 <p>　　将一个user对象的fullname属性传给template，如下</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">a_view</span><span class="params">(request)</span>:</span> </div><div class="line">	<span class="comment"># get the logged in user </span></div><div class="line">	<span class="comment"># ... do more things </span></div><div class="line">	<span class="keyword">return</span> render_to_response( </div><div class="line">		<span class="string">"view.html"</span>, </div><div class="line">		{<span class="string">"user"</span>: cur_user} </div><div class="line">	)</div></pre></td></tr></table></figure>
 
 <p>　　页面如下:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!-- view.html --&gt; </div><div class="line">&lt;div class="top-bar row"&gt; </div><div class="line">  &lt;div class="col-md-10"&gt; </div><div class="line">  &lt;!-- more top bar things go here --&gt; </div><div class="line">  &lt;/div&gt; </div><div class="line">   </div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 
-<h5 id="5-2_Flask">5.2 Flask</h5>
+<h5 id="Flask-1">Flask</h5>
 <p>　　Flask默认使用Jinja2模板语言，但是他可以配置成另外的模板。Django的例子在Jinja2上都运行的很好。</p>
-<h5 id="5-3_Pyramid">5.3 Pyramid</h5>
+<h5 id="Pyramid-1">Pyramid</h5>
 <p>　　和Flask相同，Pyramid支持许多模板（包括Jinja2和Mako）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="decorator">@view_config(renderer='templates/home.pt') </span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_view</span><span class="params">(request)</span>:</span> </div><div class="line">	<span class="comment"># do stuff... </span></div><div class="line">	<span class="keyword">return</span> {<span class="string">'user'</span>: user}</div></pre></td></tr></table></figure>
 
 <p>　　ZPT（The Zope Page Template）是基于XML的模板，因此使用XSLT-like语句操作数据</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div class="top-bar row"&gt;</div><div class="line"> &lt;div class="col-md-10"&gt;</div><div class="line"> &lt;!-- more top bar things go here --&gt;</div><div class="line"> &lt;/div&gt;</div><div class="line"> &lt;div tal:condition="user" </div><div class="line">      tal:content="string:You are logged in as ${user.fullname}" </div><div class="line">      class="col-md-2 whoami"&gt;</div><div class="line"> &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 
-<h4 id="6-实战">6.实战</h4>
+<h4 id="实战">实战</h4>
 <p>　　本节略，应用源码见附录</p>
-<h4 id="7-总结">7.总结</h4>
+<h4 id="总结">总结</h4>
 <p>　　Pyramid在三者之中是最复杂的，他可创建的应用既大可小。<br>　　最广泛使用的是Django。<br>　　Flask在创建简单但又功能强大的微型WEB项目时表现强大。</p>
 <h4 id="附录">附录</h4>
 <p>　　作者基与这三个框架在<a href="https://github.com/ryansb/wut4lunch_demos" target="_blank" rel="external">Github</a>上建立了功能相同的WEB应用。</p>
@@ -217,6 +217,11 @@
 
 	<!-- toc -->
 	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#简介"><span class="toc-article-text">简介</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#发展"><span class="toc-article-text">发展</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#社区"><span class="toc-article-text">社区</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#对Bootstrap的支持"><span class="toc-article-text">对Bootstrap的支持</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#Flask"><span class="toc-article-text">Flask</span></a></li><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#Pyramid"><span class="toc-article-text">Pyramid</span></a></li><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#Django"><span class="toc-article-text">Django</span></a></li></ol></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#模板"><span class="toc-article-text">模板</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#Django-1"><span class="toc-article-text">Django</span></a></li><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#Flask-1"><span class="toc-article-text">Flask</span></a></li><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#Pyramid-1"><span class="toc-article-text">Pyramid</span></a></li></ol></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#实战"><span class="toc-article-text">实战</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#总结"><span class="toc-article-text">总结</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#附录"><span class="toc-article-text">附录</span></a></li></ol>
+		</div>
 	
 	</div>
 
