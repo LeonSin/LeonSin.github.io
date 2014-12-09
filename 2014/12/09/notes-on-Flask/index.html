@@ -110,13 +110,13 @@
 
 	<!-- content -->
 	<div class="mypage">
-	    <h4 id="为什么选择Flask">为什么选择Flask</h4>
+	    <h4 id="Why_Flask">Why Flask</h4>
 <ol>
 <li>文档。Flask的官方文档齐全，初学者易入手</li>
 <li>微内核，与Django这种全栈式框架不同，Flask保持内核的精简，同时提供良好的扩展机制。</li>
 <li>其源码本身是很好的Python学习材料</li>
 </ol>
-<h4 id="Flask简介">Flask简介</h4>
+<h4 id="What_is_Flask">What is Flask</h4>
 <p>Flask是一个微内核的Web开发框架。<br>Flask主要依赖两个库：</p>
 <ol>
 <li>Jinja2。模板引擎</li>
@@ -132,6 +132,15 @@
 <li>flask-mongoengine。MongoEngine（Document-Object Mapper，类似关系数据库中的ORM）的Flask扩展，方便我们操作MongoDB。同时集成WTForm，统一数据库和表单的验证。</li>
 <li>Flask-Script。为Flask应用提供编写脚本的功能。可以用来运行一个开发服务器，也可以与数据库交互。</li>
 </ol>
+<h4 id="Project">Project</h4>
+<p><br></p>
+<h5 id="工程结构">工程结构</h5>
+<p>├── app —app包目录<br>│    ├── <strong>init</strong>.py —初始化app包<br>│    ├── models.py —数据模型<br>│    ├── static —静态文件目录<br>│    │     ├── bootstrap.css —样式文件<br>│    │     └── index.css —样式文件<br>│    ├── templates —模板目录<br>│    │     └── index.html —模板文件<br>│    └── views.py —视图<br>├── config.py —应用配置信息，比如数据库配置<br>├── manage.py —脚本，比如启动服务器，与数据库交互<br>├── README.md —项目的说明<br>├── requirenments.txt —项目依赖<br>└── run.py —项目运行脚本<br><br></p>
+<h5 id="dependency">dependency</h5>
+<p>在requirement.txt添加项目依赖</p>
+<blockquote>
+<p>Flask<br>flask-mongoengine<br>Flask-Script<br><br><br>&lt;未完待续&gt;</p>
+</blockquote>
 
 	</div>
 
@@ -193,7 +202,7 @@
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#为什么选择Flask"><span class="toc-article-text">为什么选择Flask</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Flask简介"><span class="toc-article-text">Flask简介</span></a></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Why_Flask"><span class="toc-article-text">Why Flask</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#What_is_Flask"><span class="toc-article-text">What is Flask</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Project"><span class="toc-article-text">Project</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#工程结构"><span class="toc-article-text">工程结构</span></a></li><li class="toc-article-item toc-article-level-5"><a class="toc-article-link" href="#dependency"><span class="toc-article-text">dependency</span></a></li></ol></li></ol>
 		</div>
 	
 	</div>
