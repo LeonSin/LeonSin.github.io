@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档：2014/12 | Leon&#39;s Blog</title>
+  <title>Collections of Git Errors and Solutions | Leon&#39;s Blog</title>
   <meta name="author" content="Leon">
   
   <meta name="description" content="The greats walks with the small without fear.The middling keep aloof">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Collections of Git Errors and Solutions"/>
   <meta property="og:site_name" content="Leon&#39;s Blog"/>
 
   
@@ -82,119 +82,116 @@
 
   <div class="container">
   	<div class="content">
-    	 <!-- archive -->
-<!-- _partial/archive -->
+    	 <!-- post -->
 
 
-<!-- archive.title -->
-<div class="page-header">
-  <h1 class="archive-title">2014/12</h1>
-</div>
+<!-- _partial/article -->
 
-<div class="row page">
-  <!-- cols -->
-  
-  <div class="col-md-9">
+<!-- _partial/post/title -->
+<div class="panel-heading">
+
+	
+  <!-- display as page -->
+		<div class="page-header">
+			<h1> Collections of Git Errors and Solutions</h1>
+		</div>
 	
 
-	  
-	  <!-- display as list -->
-	  <div class="archive">
+</div>
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+	
+
+	<!-- content -->
+	<div class="mypage">
+	    <p>1.<br>problem description:<br>Git in Window 7,<br>$ git clone <a href="https://github.com/LeonSin/awesome-flask-todo" target="_blank" rel="external">https://github.com/LeonSin/awesome-flask-todo</a><br>正克隆到 ‘awesome-flask-todo’…<br>fatal: unable to access ‘<a href="https://github.com/LeonSin/awesome-flask-todo/" target="_blank" rel="external">https://github.com/LeonSin/awesome-flask-todo/</a>‘: error setting certificate verify locations:<br>  CAfile: /bin/curl-ca-bundle.crt<br>  CApath: none<br><br><br>Solution:<br>1) Fix the path to bin/curl-ca-bundle.crt,</p>
+<blockquote>
+<p>git config —system http.sslcainfo “C:\Users\lenovo\AppData\Local\GitHub\PortableGit_7eaa994416ae7b397b2628033ac45f8ff6ac2010\bin\curl-ca-bundle.crt”</p>
+</blockquote>
+<p>or </p>
+<p>2)Choose to switch of SSL checks completely</p>
+<blockquote>
+<p>git config —system http.sslverify false</p>
+</blockquote>
+
+	</div>
+
+	<div>
+  	<center>
+	<!-- _partial/post/pagination -->
+<div class="pagination">
+<ul class="pagination">
+	 
 		
-		
-		
-			
-			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2014">2014<b class="caret"></b></h4>
-			<ul id="2014" class="collapse in">
-			
-		
-<li class="listing-item">
-  <span class="date_class"> 2014-12-09 </span> &raquo;
-  
-  <span class="title"><a href="/2014/12/09/Collections-of-Git-Errors-and-Solutions/" >Collections of Git Errors and Solutions</a></span>
-  
-</li>
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		
-<li class="listing-item">
-  <span class="date_class"> 2014-12-09 </span> &raquo;
-  
-  <span class="title"><a href="/2014/12/09/notes-on-Flask/" >notes_on_Flask</a></span>
-  
-</li>
-
+		   <li class="next"><a href="/2014/12/09/notes-on-Flask/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        
+	
 </ul>
 </div>
 
+    </center>
+	</div>
 
-</div> <!-- col-md-9/col-md-12 -->
+	<!-- comment -->
+	<!-- _partial/post/comment -->
+
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
 
 
-<!-- _partial/sidebar -->
-<div class="col-md-3">
-	<div id="sidebar">
+
+	</div> <!-- col-md-9/col-md-12 -->
+
 	
-			<!-- _widget/search -->
-<div class="form-group has-success has-feedback">
-  <form action="//google.com/search" method="get" accept-charset="utf-8" >
-    <input type="search" name="q" results="0" placeholder="搜索" class="form-control">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
-</div>
+		<!-- _partial/post/meta -->
+<div class="col-md-3"> 
 
-		
-			<!-- _widget/category -->
-
-
-		
-			<!-- _widget/tagcloud -->
-
-
-		
-			<!-- _widget/recent_posts -->
-
-<div class="widget">
-  <h4>最新文章</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2014/12/09/Collections-of-Git-Errors-and-Solutions/" ><i class="fa fa-file-o"></i>Collections of Git Errors a...</a>
-      </li>
-    
-      <li>
-        <a href="/2014/12/09/notes-on-Flask/" ><i class="fa fa-file-o"></i>notes_on_Flask</a>
-      </li>
-    
-      <li>
-        <a href="/2014/10/17/Digest-of-Django-vs-Flask-vs-Pyramid-Choosing-a-Python-Web-Framework/" ><i class="fa fa-file-o"></i>Digest of [Django vs Flask ...</a>
-      </li>
-    
-  </ul>
-</div>
-
-
-		
-			<!-- _widget/links -->
-
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
+	<!-- date -->
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/yieme/freewill/" title="Freewill's Github repository." target="_blank"]);">Freemind</a></li>
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	12月 9 2014
+	</div>
 	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/LeonSin" title="My Github account." target="_blank"]);">My Github</a></li>
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
 	
-	</ul>
-</div>
 
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			
+		</div>
+	
+	</div>
 
-		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
+    <hr>
 
+</div><!-- col-md-3 -->
 
+	
+
+</div><!-- row -->
 
 
 	  </div>

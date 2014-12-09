@@ -111,6 +111,45 @@
 	
 	<!-- display as entry -->
 		<h3 class="xtitle">
+			<a href="/2014/12/09/Collections-of-Git-Errors-and-Solutions/" >Collections of Git Errors and Solutions</a>
+			<span class="text-muted pull-right"><small> 12月 9 2014 </small></span>
+		</h3>
+	
+
+</div>
+
+					<!-- _partial/post/entry -->
+<div class="panel-body">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <p>1.<br>problem description:<br>Git in Window 7,<br>$ git clone <a href="https://github.com/LeonSin/awesome-flask-todo" target="_blank" rel="external">https://github.com/LeonSin/awesome-flask-todo</a><br>正克隆到 ‘awesome-flask-todo’…<br>fatal: unable to access ‘<a href="https://github.com/LeonSin/awesome-flask-todo/" target="_blank" rel="external">https://github.com/LeonSin/awesome-flask-todo/</a>‘: error setting certificate verify locations:<br>  CAfile: /bin/curl-ca-bundle.crt<br>  CApath: none<br><br><br>Solution:<br>1) Fix the path to bin/curl-ca-bundle.crt,</p>
+<blockquote>
+<p>git config —system http.sslcainfo “C:\Users\lenovo\AppData\Local\GitHub\PortableGit_7eaa994416ae7b397b2628033ac45f8ff6ac2010\bin\curl-ca-bundle.crt”</p>
+</blockquote>
+<p>or </p>
+<p>2)Choose to switch of SSL checks completely</p>
+<blockquote>
+<p>git config —system http.sslverify false</p>
+</blockquote>
+
+	
+	</div>
+	
+
+</div>
+	<a type="button" href="/2014/12/09/Collections-of-Git-Errors-and-Solutions/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+				
+					<!-- _partial/post/title -->
+<div class="panel-heading">
+
+	
+	<!-- display as entry -->
+		<h3 class="xtitle">
 			<a href="/2014/12/09/notes-on-Flask/" >notes_on_Flask</a>
 			<span class="text-muted pull-right"><small> 12月 9 2014 </small></span>
 		</h3>
@@ -292,6 +331,10 @@
 <div class="widget">
   <h4>最新文章</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2014/12/09/Collections-of-Git-Errors-and-Solutions/" ><i class="fa fa-file-o"></i>Collections of Git Errors a...</a>
+      </li>
     
       <li>
         <a href="/2014/12/09/notes-on-Flask/" ><i class="fa fa-file-o"></i>notes_on_Flask</a>
