@@ -179,6 +179,43 @@
 <li>The return value of a function is the last expression in the function body to be evaluated.</li>
 </ul>
 <h3 id="Function_Arguments">Function Arguments</h3>
+<p>Functions have named arguments which potentially have default values.</p>
+<ul>
+<li>The formal arguments are the arguments included in the function definition</li>
+<li>The formals function returns a list of all the formal arguments of a function</li>
+<li>Not every function call in R makes use of all the formal arguments</li>
+<li>Function arguments can be missing or might have default values</li>
+</ul>
+<h3 id="Argument_Matching">Argument Matching</h3>
+<p>R functions arguments can be matched positionally or by name.So the following calls to sd are all equivalent</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt; mydata &lt;- rnorm(<span class="number">100</span>)</div><div class="line">&gt; sd(mydata)</div><div class="line">&gt; sd(x = mydata)</div><div class="line">&gt; sd(x = mydata, na.rm = <span class="literal">FALSE</span>)</div><div class="line">&gt; sd(na.rm = <span class="literal">FALSE</span>, x = mydata)</div><div class="line">&gt; sd(na.rm = <span class="literal">FALSE</span>, mydata)</div></pre></td></tr></table></figure>
+
+<h3 id="other_aspects">other aspects</h3>
+<h4 id="Defining_a_Function">Defining a Function</h4>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">f &lt;- <span class="keyword">function</span>(a, b = <span class="number">1</span>, c = <span class="number">2</span>, d = <span class="literal">NULL</span>) {</div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>In addition to not specifying a default value, you can also set an argument value to NULL.</p>
+<h4 id="Lazy_Evaluation">Lazy Evaluation</h4>
+<p>Arguments to functions are evaluated lazily, so they are evaluated only as needed.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">f &lt;- <span class="keyword">function</span>(a, b) {</div><div class="line">	a^<span class="number">2</span></div><div class="line">}</div><div class="line">f(<span class="number">2</span>)</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## [1] 4</span></div></pre></td></tr></table></figure>
+
+<p>This function never actually uses the argument b, so calling f(2) will not produce an error becausethe 2 gets positionally matched to a.</p>
+<h4 id="The_“…”_Argument">The “…” Argument</h4>
+<p>The … argument indicate a variable number of arguments that are usually passed on to otherfunctions.</p>
+<ul>
+<li>… is often used when extending another function and you don’t want to copy the entire argumentlist of the original function</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">myplot &lt;- <span class="keyword">function</span>(x, y, type = <span class="string">"l"</span>, <span class="keyword">...</span>) {</div><div class="line">	plot(x, y, type = type, <span class="keyword">...</span>)</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<ul>
+<li>Generic functions use … so that extra arguments can be passed to methods (more on this later).</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; mean</div><div class="line"><span class="keyword">function</span> (x, <span class="keyword">...</span>)</div><div class="line">UseMethod(<span class="string">"mean"</span>)</div></pre></td></tr></table></figure>
+
 
 	
 	</div>
