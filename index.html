@@ -125,8 +125,8 @@
 	<div class="col-md-12">
 	  
 	
-	  <h3 id="Introduction_to_the_R_Language">Introduction to the R Language</h3>
-<h4 id="Control_Stucture">Control Stucture</h4>
+	  <h1 id="Introduction_to_the_R_Language">Introduction to the R Language</h1>
+<h2 id="Control_Stucture">Control Stucture</h2>
 <p>Control structures in R allow you to control the flow of execution of the program,depending on runtime conditions.Common strutures are</p>
 <ul>
 <li>if,else: testing a condition</li>
@@ -137,10 +137,10 @@
 <li>next: skip an interation of a loop</li>
 <li>return: exit a function</li>
 </ul>
-<h5 id="if">if</h5>
+<h3 id="if">if</h3>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(&lt;condition&gt;) {</div><div class="line">	<span class="comment">## do something</span></div><div class="line">} <span class="keyword">else</span> {</div><div class="line">	<span class="comment">## do something else</span></div><div class="line">}</div><div class="line"><span class="keyword">if</span>(&lt;condition1&gt;) {</div><div class="line">	<span class="comment">## do something</span></div><div class="line">} <span class="keyword">else</span> <span class="keyword">if</span>(&lt;condition2&gt;) {</div><div class="line">	<span class="comment">## do something different</span></div><div class="line">} <span class="keyword">else</span> {</div><div class="line">	<span class="comment">## do something different</span></div><div class="line">}</div></pre></td></tr></table></figure>
 
-<h5 id="for">for</h5>
+<h3 id="for">for</h3>
 <p>for loops take an iterator variable and assign it successive values from a sequence or vector.For loops are most commonly used for iterating over the elements fo an object(list, vector,etc.)</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> <span class="number">1</span>:<span class="number">10</span>){</div><div class="line">	print(i)</div><div class="line">}</div></pre></td></tr></table></figure>
 
@@ -148,11 +148,11 @@
 <p>example:<br>These three loops have the same behavior</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">x &lt;- c(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>)</div><div class="line"></div><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> <span class="number">1</span>:<span class="number">4</span>){</div><div class="line">	print(x[i])</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> seq_along(x)){</div><div class="line">	print(x[i])</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">for</span>(letter <span class="keyword">in</span> x){</div><div class="line">	print(letter)</div><div class="line">}	</div><div class="line"></div><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> <span class="number">1</span>:<span class="number">4</span>) print(x[i])</div></pre></td></tr></table></figure>
 
-<h5 id="while">while</h5>
+<h3 id="while">while</h3>
 <p>While loops begin by testing a condition.If it is true, then they execute the loop body.Once the loop body is executed, the condition isd tested again, and so forth.</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">count &lt;- <span class="number">0</span></div><div class="line"><span class="keyword">while</span>(count &lt; <span class="number">10</span>){</div><div class="line">	print(count)</div><div class="line">}</div></pre></td></tr></table></figure>
 
-<h5 id="repeat">repeat</h5>
+<h3 id="repeat">repeat</h3>
 <p>Repeat initiates an infinite loop; these are not commonly used in statistical applications but they do have their uses.The only way to exit a repeat loop is to call break.</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">x0 &lt;- <span class="number">1</span></div><div class="line">tol &lt;- <span class="number">1e-8</span></div><div class="line"><span class="keyword">repeat</span> {</div><div class="line">	x1 &lt;- computeEstimate()</div><div class="line">	<span class="keyword">if</span>(abs(x1 - x0) &lt; tol) {</div><div class="line">		<span class="keyword">break</span></div><div class="line">	} <span class="keyword">else</span> {</div><div class="line">		x0 &lt;- x1</div><div class="line">	}</div><div class="line">}</div></pre></td></tr></table></figure>
 
