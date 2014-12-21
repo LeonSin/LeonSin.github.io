@@ -148,6 +148,23 @@
 <li>It can be used with general arrays, e.g. taking the average of an array of matrices</li>
 <li>It is not really faster than writing a loop, but it works in one line!</li>
 </ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; str(apply)</div><div class="line"><span class="keyword">function</span>( X, MARGIN, FUN, <span class="keyword">...</span>)</div></pre></td></tr></table></figure>
+
+<ul>
+<li>X is an array</li>
+<li>MARGIN is an integer vector indicating which margins should be “retained”.</li>
+<li>FUN is a function to be applied</li>
+<li>… is for other arguments to be passed to FUN</li>
+</ul>
+<h3 id="col/row_sums_and_means">col/row sums and means</h3>
+<p>For sum and means of matrix dimensions, we have some shortcuts.</p>
+<ul>
+<li>rowSums = apply(x, 1, sum)</li>
+<li>rowMeans = apply(x, 1, mean)</li>
+<li>colSums = apply(x, 2, sum)</li>
+<li>colMeans = apply(x, 2, mean)</li>
+</ul>
+<p>The shortcut function are much faster, but you won’t notice unless you’re using a large matrix.</p>
 
 	
 	</div>
