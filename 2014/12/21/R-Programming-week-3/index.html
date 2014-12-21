@@ -150,6 +150,16 @@
 <li>colMeans = apply(x, 2, mean)</li>
 </ul>
 <p>The shortcut function are much faster, but you won’t notice unless you’re using a large matrix.</p>
+<h2 id="mapply">mapply</h2>
+<p>mapply is a multivariate apply of sorts which applies a function in parallel over a set of arguments.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; str(mapply)</div><div class="line"><span class="keyword">function</span> (FUN, <span class="keyword">...</span>, MoreArgs = <span class="literal">NULL</span>, SIMPLIFY = <span class="literal">TRUE</span>, USE.NAMES = <span class="literal">TRUE</span>)</div></pre></td></tr></table></figure>
+
+<ul>
+<li>FUN is a function to apply</li>
+<li>… contains arguments to apply over</li>
+<li>MoreArgs is a list of other arguments to FUN</li>
+<li>SIMPLIFY indicates whether the result should be simplified</li>
+</ul>
 
 	</div>
 
@@ -221,7 +231,7 @@
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Introduction_to_the_R_Language"><span class="toc-article-text">Introduction to the R Language</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Loop_Functions"><span class="toc-article-text">Loop Functions</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#lapply"><span class="toc-article-text">lapply</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#apply"><span class="toc-article-text">apply</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#col/row_sums_and_means"><span class="toc-article-text">col/row sums and means</span></a></li></ol></li></ol></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Introduction_to_the_R_Language"><span class="toc-article-text">Introduction to the R Language</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Loop_Functions"><span class="toc-article-text">Loop Functions</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#lapply"><span class="toc-article-text">lapply</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#apply"><span class="toc-article-text">apply</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#col/row_sums_and_means"><span class="toc-article-text">col/row sums and means</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#mapply"><span class="toc-article-text">mapply</span></a></li></ol></li></ol>
 		</div>
 	
 	</div>

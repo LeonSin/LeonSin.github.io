@@ -165,6 +165,16 @@
 <li>colMeans = apply(x, 2, mean)</li>
 </ul>
 <p>The shortcut function are much faster, but you won’t notice unless you’re using a large matrix.</p>
+<h2 id="mapply">mapply</h2>
+<p>mapply is a multivariate apply of sorts which applies a function in parallel over a set of arguments.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; str(mapply)</div><div class="line"><span class="keyword">function</span> (FUN, <span class="keyword">...</span>, MoreArgs = <span class="literal">NULL</span>, SIMPLIFY = <span class="literal">TRUE</span>, USE.NAMES = <span class="literal">TRUE</span>)</div></pre></td></tr></table></figure>
+
+<ul>
+<li>FUN is a function to apply</li>
+<li>… contains arguments to apply over</li>
+<li>MoreArgs is a list of other arguments to FUN</li>
+<li>SIMPLIFY indicates whether the result should be simplified</li>
+</ul>
 
 	
 	</div>
