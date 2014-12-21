@@ -135,6 +135,19 @@
 <li>tapply: Apply a function over subsets of vector</li>
 <li>mapply: Multivariate version of lapply</li>
 </ul>
+<p>An auxiliary function split is also useful, particularly in conjunction with lapply.</p>
+<h2 id="lapply">lapply</h2>
+<p>lapply takes 3 arguments:(1) a list X; (2) a function (or the name of a function) FUN; (3) other arguments via its … argument.If X is not a list, it will be coerced to a list using as.list</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> (X, FUN, <span class="keyword">...</span>) </div><div class="line">{</div><div class="line">    FUN &lt;- match.fun(FUN)</div><div class="line">    <span class="keyword">if</span> (!is.vector(X) || is.object(X)) </div><div class="line">        X &lt;- as.list(X)</div><div class="line">    .Internal(lapply(X, FUN))</div><div class="line">}</div><div class="line">&lt;bytecode: <span class="number">0x7ff7a1951c00</span>&gt;</div><div class="line">&lt;environment: namespace:base&gt;</div></pre></td></tr></table></figure>
+
+<p>lapply always returns a list, regardless of the class of the input.</p>
+<h2 id="apply">apply</h2>
+<p>apply is used to a evaluate a function (often an anonymous one) over the margins of an array.</p>
+<ul>
+<li>It is most often used to apply a function to the rows or columns of a matrix</li>
+<li>It can be used with general arrays, e.g. taking the average of an array of matrices</li>
+<li>It is not really faster than writing a loop, but it works in one line!</li>
+</ul>
 
 	
 	</div>
