@@ -111,6 +111,67 @@
 	
 	<!-- display as entry -->
 		<h3 class="xtitle">
+			<a href="/2014/12/09/notes-on-Flask/" >notes_on_Flask</a>
+			<span class="text-muted pull-right"><small> 12月 9 2014 </small></span>
+		</h3>
+	
+
+</div>
+
+					<!-- _partial/post/entry -->
+<div class="panel-body">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h4 id="Why_Flask">Why Flask</h4>
+<ol>
+<li>文档。Flask的官方文档齐全，初学者易入手</li>
+<li>微内核，与Django这种全栈式框架不同，Flask保持内核的精简，同时提供良好的扩展机制。</li>
+<li>其源码本身是很好的Python学习材料</li>
+</ol>
+<h4 id="What_is_Flask">What is Flask</h4>
+<p>Flask是一个微内核的Web开发框架。<br>Flask主要依赖两个库：</p>
+<ol>
+<li>Jinja2。模板引擎</li>
+<li>Werkzeug。 WSGI套件</li>
+</ol>
+<p>“微内核”的定义：</p>
+<blockquote>
+<p>The “micro” in microframework means Flask aims to keep the core simple but extensible.</p>
+</blockquote>
+<p>内核精简，易于扩展，功能不失强大，比如，一般的Web应用都需要和数据库交互。某些框架中，Django已经集成了ORM框架，而Flask不会束缚你，你可以使用SQLAlchemy,也可以使用MongoEngine。在开源社区中，有大量优秀的Flask扩展，主要有：</p>
+<ol>
+<li>Flask-WTF。基于WTForms的表单验证扩展。</li>
+<li>flask-mongoengine。MongoEngine（Document-Object Mapper，类似关系数据库中的ORM）的Flask扩展，方便我们操作MongoDB。同时集成WTForm，统一数据库和表单的验证。</li>
+<li>Flask-Script。为Flask应用提供编写脚本的功能。可以用来运行一个开发服务器，也可以与数据库交互。</li>
+</ol>
+<h4 id="Project">Project</h4>
+<p><br></p>
+<h5 id="工程结构">工程结构</h5>
+<p>├── app —app包目录<br>│    ├── <strong>init</strong>.py —初始化app包<br>│    ├── models.py —数据模型<br>│    ├── static —静态文件目录<br>│    │     ├── bootstrap.css —样式文件<br>│    │     └── index.css —样式文件<br>│    ├── templates —模板目录<br>│    │     └── index.html —模板文件<br>│    └── views.py —视图<br>├── config.py —应用配置信息，比如数据库配置<br>├── manage.py —脚本，比如启动服务器，与数据库交互<br>├── README.md —项目的说明<br>├── requirenments.txt —项目依赖<br>└── run.py —项目运行脚本<br><br></p>
+<h5 id="dependency">dependency</h5>
+<p>在requirement.txt添加项目依赖</p>
+<blockquote>
+<p>Flask<br>flask-mongoengine<br>Flask-Script<br><br><br>&lt;未完待续&gt;</p>
+</blockquote>
+
+	
+	</div>
+	
+
+</div>
+	<a type="button" href="/2014/12/09/notes-on-Flask/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+				
+					<!-- _partial/post/title -->
+<div class="panel-heading">
+
+	
+	<!-- display as entry -->
+		<h3 class="xtitle">
 			<a href="/2014/10/17/Digest-of-Django-vs-Flask-vs-Pyramid-Choosing-a-Python-Web-Framework/" >Digest of [Django vs Flask vs Pyramid: Choosing a Python Web Framework]</a>
 			<span class="text-muted pull-right"><small> 10月 17 2014 </small></span>
 		</h3>
@@ -247,6 +308,8 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">
 		
+			<li><a href="/tags/Docker/">Docker<span>1</span></a></li>
+		
 			<li><a href="/tags/R/">R<span>2</span></a></li>
 		
 		
@@ -262,6 +325,10 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2014/12/30/Resource-collections-on-Docker/" ><i class="fa fa-file-o"></i>Resource collections on Docker</a>
+      </li>
+    
+      <li>
         <a href="/2014/12/21/R-Programming-week-3/" ><i class="fa fa-file-o"></i>R Programming week 3</a>
       </li>
     
@@ -275,10 +342,6 @@
     
       <li>
         <a href="/2014/12/09/Collections-of-Git-Errors-and-Solutions/" ><i class="fa fa-file-o"></i>Collections of Git Errors a...</a>
-      </li>
-    
-      <li>
-        <a href="/2014/12/09/notes-on-Flask/" ><i class="fa fa-file-o"></i>notes_on_Flask</a>
       </li>
     
   </ul>
